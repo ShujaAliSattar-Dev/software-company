@@ -1,0 +1,248 @@
+/* Login.css */
+
+.login {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  position: relative;
+  background-image: linear-gradient(#0000007e, #0000007e), url(/background_banner.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Arial', sans-serif;
+}
+
+.login-logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 150px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.login-logo:hover {
+  transform: scale(1.05);
+}
+
+.login-form {
+  width: 400px;
+  height: fit-content;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px 40px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-radius: 4px;
+  backdrop-filter: blur(3px);
+}
+
+.login-form h1 {
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  text-align: left;
+}
+.login form input{
+        margin-bottom: 10px;
+        width: 100%;
+}
+.login-form input[type="text"],
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  height: 40px;
+  background-color: #333;
+  border: none;
+  outline: none;
+  padding: 0 15px;
+  color: white;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+
+.login-form input[type="text"]:focus,
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus {
+  background-color: #555;
+}
+
+.login-form input::placeholder {
+  color: #8c8c8c;
+  font-size: 16px;
+}
+
+.login-form button {
+  height: 40px;
+  width: 100%;
+  background-color: #e50914;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.login-form button:hover {
+  background-color: #f40612;
+}
+
+.login-form button:active {
+  background-color: #d40813;
+}
+
+.form-help {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #b3b3b3;
+}
+
+.remember input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #e50914;
+  background-color: #333;
+  border: 1px solid #737373;
+}
+
+.remember label {
+  cursor: pointer;
+  user-select: none;
+  font-size: 13px;
+  color: #b3b3b3;
+}
+
+.form-help p {
+  color: #b3b3b3;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.form-help p:hover {
+  color: white;
+}
+
+.form-switch {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #b3b3b3;
+  gap: 20px;
+}
+.form-switch p {
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: #b3b3b3;
+
+}
+.form-switch span {
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-logo {
+    width: 120px;
+    top: 15px;
+    left: 15px;
+  }
+  
+  .login-form {
+    width: 280px;
+    padding: 50px 30px;
+  }
+  
+  .login-form h1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-form {
+    width: 90%;
+    max-width: 300px;
+    padding: 40px 25px;
+    height: auto;
+    min-height: 400px;
+  }
+  
+  .form-help {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  
+  .login-logo {
+    width: 100px;
+    top: 10px;
+    left: 10px;
+  }
+}
+
+/* Loading state */
+.login-form button:disabled {
+  background-color: #731208;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+/* Focus states for accessibility */
+.login-form button:focus-visible {
+  outline: 2px solid #e50914;
+  outline-offset: 2px;
+}
+
+.login-form input:focus-visible {
+  outline: 2px solid #e50914;
+  outline-offset: 2px;
+}
+
+.remember input[type="checkbox"]:focus-visible {
+  outline: 2px solid #e50914;
+  outline-offset: 2px;
+}
+
+/* Animation for form appearance */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -45%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.login-form {
+  animation: fadeIn 0.6s ease-out;
+}
