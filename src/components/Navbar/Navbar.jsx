@@ -24,6 +24,7 @@ const Navbar = () => {
       <div className="navbar-left">
         <img src={logo} alt="" />
         <ul>
+          <li>Shuja ALi Sattar</li>
           <li>Home</li>
           <li>TV Shows</li>
           <li>Movies</li>
