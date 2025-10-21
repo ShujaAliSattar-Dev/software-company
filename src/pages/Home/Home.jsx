@@ -6,7 +6,7 @@ import hero_title from '../../assets/hero_title.png'
 import info_icon from '../../assets/info_icon.png'
 import play_icon from '../../assets/play_icon.png'
 import Footer from '../../components/Footer/Footer'
-import TitleCards from '../../components/TitleCard/Titlecards'
+import TitleCards from '../../components/TitleCards/TitleCards'
 
 const Home = () => {
   return (
